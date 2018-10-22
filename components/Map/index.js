@@ -61,7 +61,7 @@ class Map extends Component {
             {...this.state.viewport}
             width={typeof window !== 'undefined' && window.innerWidth}
             height={this.props.height}
-            mapStyle="mapbox://styles/weatherbell/cje6hsqkwge1g2rq933i04tu3"
+            mapStyle="mapbox://styles/weatherbell/cje6hsqkwge1g2rq933i04tu3?access_token=pk.eyJ1Ijoid2VhdGhlcmJlbGwiLCJhIjoiY2plNmhvZmZqMDBmbTJ3bnZ2aHEwN2NiNSJ9.DpntgEKEQFW3VO6fDRuxsQGwiLCJhIjoiY2plNmhvZmZqMDBmbTJ3bnZ2aHEwN2NiNSJ9.DpntgEKEQFW3VO6fDRuxsQ"
             onViewportChange={viewport => this.setState({ viewport })}
             interactive={false}
             attributionControl={false}
