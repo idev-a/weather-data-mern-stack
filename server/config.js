@@ -23,7 +23,7 @@ module.exports = {
 
   // Database
   mysql: {
-    database: 'rotogrinders',
+    database: 'rotogrindersnfl',
     username: process.env.NODE_ENV === 'development' ? 'root' : 'proxyuser',
     password: process.env.NODE_ENV === 'development' ? '' : '4batEGgF8aTU',
   },
