@@ -51,7 +51,7 @@ exports.getTableData = (req, res) => {
         AND weather.wind_speed ${windSpeedAboveBelow} ${Number(windSpeed)}` : ''
       }
       
-      GROUP BY game.weather_id AND venue.id, venue.lat, venue.lng, venue.name, venue.team
+      GROUP BY game.weather_id ${includeWeather ? ', weather.id' : ''} AND venue.id, venue.lat, venue.lng, venue.name, venue.team
       ;`,
       {
         replacements: {
