@@ -1,0 +1,23 @@
+import Promise from 'bluebird';
+import models from '../models';
+import { convertDirectionToDegrees } from '../utils';
+
+const { Game, Venue } = models;
+//
+// Game.findAll().then(games => {
+//   Promise.map(
+//     games,
+//     game =>
+//       Venue.findOne({ where: { name: game.venue } })
+//         .then(venue => game.update({ venue_id: venue.id }))
+//         .then(() => {
+//           console.log(
+//             `Game ${game} updated with venue ${game.venue}:${game.venue_id}`
+//           );
+//         })
+//         .catch(err => {
+//           console.log('Error', err);
+//         }),
+//     { concurrency: 20 }
+//   );
+// });

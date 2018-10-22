@@ -1,0 +1,59 @@
+:global {
+
+  .frm {
+
+    margin-bottom: 0;
+
+    input[type="text"] {
+      width: auto;
+      margin-bottom: 0px;
+    }
+
+    select {
+      width: 100px;
+    }
+
+    .blk.select {
+      margin-bottom: 0;
+      width: 100px;
+    }
+
+    .btn {
+      float: none;
+      margin-top: 15px;
+    }
+
+    .rdt.rdtOpen {
+      position: static;
+    }
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.form {
+  overflow-x: auto;
+}
+
+.venueAutocomplete {
+  padding: 10px;
+}
+
+.windFieldDirection,
+.precipitation {
+  height: 34px !important;
+  margin-top: 15px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.inputUnit {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}

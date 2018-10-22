@@ -1,0 +1,49 @@
+.tableWrapper {
+  position: relative;
+  min-height: 222px;
+  background-color: #fff;
+  overflow-x: scroll;
+}
+
+.table {
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  background-color: #ddd;
+  position: relative;
+
+  tr {
+    height: 40px;
+
+    &:nth-of-type(odd) {
+      background-color: #eee;
+    }
+
+    &:nth-of-type(even) {
+      background-color: #fff;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+  }
+}
+
+.tableHeading {
+  background-color: #fff;
+  margin: 0;
+  padding: 15px;
+}
+
+:global {
+  .tbl tbody td:last-of-type {
+    text-align: inherit;
+  }
+}

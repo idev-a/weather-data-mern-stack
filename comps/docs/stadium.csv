@@ -1,0 +1,49 @@
+Home Team,City,State,Venue,Year Opened,Year Closed,Latitude,Longitude,Roof,Playing Surface,Stadium Orientation (Cardinal),Orientation (Wind Out - Degrees),isCurrent
+
+Arizona Diamondbacks,Phoenix,Arizona,Chase Field,1998,N/A,33.445278,-112.066944,Retractable,Grass,N,180,1
+Atlanta Braves,Atlanta,Georgia,SunTrust Park,2017,N/A,33.89,-84.468,Open,Grass,SE,315,1
+Baltimore Orioles,Baltimore,Maryland,Oriole Park at Camden Yards,1992,N/A,39.283889,-76.621667,Open,Grass,NNE,202.5,1
+Boston Red Sox,Boston,Massachusetts,Fenway Park,1912,N/A,42.346389,-71.0975,Open,Grass,NE,225,1
+Chicago Cubs,Chicago,Illinois,Wrigley Field,1914,N/A,41.948333,-87.655556,Open,Grass,NE,225,1
+Chicago White Sox,Chicago,Illinois,Guaranteed Rate Field,1991,N/A,41.83,-87.633889,Open,Grass,ESE,292.5,1
+Cincinnati Reds,Cincinnati,Ohio,Great American Ball Park,2003,N/A,39.0975,-84.506667,Open,Grass,ESE,292.5,1
+Cleveland Indians,Cleveland,Ohio,Progressive Field,1994,N/A,41.495833,-81.685278,Open,Grass,N,180,1
+Colorado Rockies,Denver,Colorado,Coors Field,1995,N/A,39.756111,-104.994167,Open,Grass,N,180,1
+Detroit Tigers,Detroit,Michigan,Comerica Park,2000,N/A,42.339167,-83.048611,Open,Grass,SSE,337.5,1
+Houston Astros,Houston,Texas,Minute Maid Park,2000,N/A,29.756944,-95.355556,Retractable,Grass,ENE,247.5,1
+Kansas City Royals,Kansas City,Missouri,Kauffman Stadium,1973,N/A,39.051389,-94.480556,Open,Grass,NE,225,1
+Los Angeles Angels,Anaheim,California,Angel Stadium of Anaheim,1966,N/A,33.800278,-117.882778,Open,Grass,NE,225,1
+Los Angeles Dodgers,Los Angeles,California,Dodger Stadium,1962,N/A,34.073611,-118.24,Open,Grass,NNE,202.5,1
+Miami Marlins,Miami,Florida,Marlins Park,2012,N/A,25.778056,-80.219722,Retractable,Grass,ESE,292.5,1
+Milwaukee Brewers,Milwaukee,Wisconsin,Miller Park,2001,N/A,43.028333,-87.971111,Retractable,Grass,SE,315,1
+Minnesota Twins,Minneapolis,Minnesota,Guaranteed Rate Field,2010,N/A,44.981667,-93.278333,Open,Grass,E,270,1
+New York Mets,New York City,New York,Citi Field,2009,N/A,40.756944,-73.845833,Open,Grass,NNE,202.5,1
+New York Yankees,New York City,New York,Yankee Stadium,2009,N/A,40.829167,-73.926389,Open,Grass,ENE,247.5,1
+Oakland Athletics,Oakland,California,Oakland–Alameda County Coliseum,1966,N/A,37.751667,-122.200556,Open,Grass,NE,225,1
+Philadelphia Phillies,Philadelphia,Pennsylvania,Citizens Bank Park,2004,N/A,39.905833,-75.166389,Open,Grass,NNE,202.5,1
+Pittsburgh Pirates,Pittsburgh,Pennsylvania,PNC Park,2001,N/A,40.446944,-80.005833,Open,Grass,ESE,292.5,1
+San Diego Padres,San Diego,California,Petco Park,2004,N/A,32.707222,-117.156667,Open,Grass,N,180,1
+San Francisco Giants,San Francisco,California,AT&T Park,2000,N/A,37.778611,-122.389167,Open,Grass,ESE,292.5,1
+Seattle Mariners,Seattle,Washington,Safeco Field,1999,N/A,47.591389,-122.3325,Retractable,Grass,NE,225,1
+St. Louis Cardinals,St. Louis,Missouri,Busch Stadium,2006,N/A,38.6225,-90.193056,Open,Grass,NE,225,1
+Tampa Bay Rays,St. Petersburg,Florida,Tropicana Field,1990,N/A,27.768333,-82.653333,Dome,AstroTurfGameDay Grass,NE,225,1
+Texas Rangers,Arlington,Texas,Globe Life Park in Arlington,1994,N/A,32.751389,-97.082778,Open,Grass,SE,315,1
+Toronto Blue Jays,Toronto,Ontario,Rogers Centre,1989,N/A,43.641389,-79.389167,Retractable,AstroTurfGameDay Grass 3D,NNW,157.5,1
+Washington Nationals,Washington,D.C.,Nationals Park,2008,N/A,38.872778,-77.0075,Open,Grass,NNE,202.5,1
+Atlanta Braves,Atlanta,Georgia,Turner Field,1997,2016,33.735278,-84.389444,Open,Grass,NNE,202.5,0
+Washington Nationals,Washington,D.C.,RFK Stadium,2005,2007,38.89,-76.972,Open,Grass,E,270,0
+Montreal Expos,Montreal,Quebec,Olympic Stadium,1977,2004,45.558,-73.552,Dome,AstroTurf,NNW,157.5,0
+New York Mets,New York City,New York,Shea Stadium,1964,2008,40.755556,-73.848056,Open,Grass,ENE,247.5,0
+New York Yankees,New York City,New York,Yankee Stadium,1923,2008,40.826944,-73.928056,Open,Grass,E,270,0
+Detroit Tigers,Detroit,Michigan,Tiger Stadium,1912,2001,42.331944,-83.068889,Open,Grass,NNE,202.5,0
+Houston Astros,Houston,Texas,Astrodome,1965,1999,29.685,-95.407778,Dome,AstroTurf,E,270,0
+Florida Marlins,Miami,Florida,Sun Life Park,1993,2011,25.958056,-80.238889,Open,Grass,SE,315,0
+Milwaukee Brewers,Milwaukee,Wisconsin,Milwaukee County Stadium,1970,2000,43.03,-87.974,Open,Grass,SE,315,0
+Minnesota Twins,Minneapolis,Minnesota,Metrodome,1982,2009,44.973889,-93.258056,Dome,AstroTurf,ENE,247.5,0
+Philadelphia Phillies,Philadelphia,Pennsylvania,Veterans Stadium,1971,2003,39.906667,-75.171111,Open,AstroTurf,ENE,247.5,0
+Pittsburgh Pirates,Pittsburgh,Pennsylvania,Three Rivers Stadium,1970,2000,40.446667,-80.012778,Open,AstroTurf,SE,315,0
+San Diego Padres,San Diego,California,Jack Murphy Stadium,1969,2003,32.783056,-117.119444,Open,Grass,N,180,0
+San Francisco Giants,San Francisco California,Candlestick Park,1960,1999,37.713611,-122.386111,Open,Grass,N,180,0
+Seattle Mariners,Seattle,Washington,Kingdome,1977,1999,47.595278,-122.331389,Dome,AstroTurf,NE,225,0
+St. Louis Cardinals,St. Louis,Missouri,Busch Memorial Stadium,1966,2005,38.623889,-90.1925,Open,AstroTurf/Grass,SSE,337.5,0
+Montreal Expos,San Juan,Puerto Rico,Hiram Bithorn Stadium,2003,2004,18.416667,-66.073056,Open,AstroTurf,SE,315,0

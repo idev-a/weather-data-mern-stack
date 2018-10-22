@@ -1,0 +1,5 @@
+User: proxyuser
+Pass: 4batEGgF8aTU
+Host: localhost
+Port: 3306
+Database: rotogrinders

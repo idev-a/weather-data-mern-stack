@@ -1,0 +1,4 @@
+Docs: https://developer.weathersource.com/
+Username: weatherbell
+Password: f3VGZCrTDWar
+API Token: e7a7da8cc27f6ff118d9
