@@ -2,14 +2,15 @@ var fs = require('fs');
 var path = require('path');
 var mysql = require('mysql');
 // var dateFormat = require('dateformat');
+const config = require('../config');
 var moment = require('moment');
 
 // Configure MySQL connection
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: 'root',
-	password: '',
-    database: 'rotogrinders',
+	user: config.mysql.username,
+	password: config.mysql.password,
+    database: config.mysql.database,
     multipleStatements: true,
   })
 
