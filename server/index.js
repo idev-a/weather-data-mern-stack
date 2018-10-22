@@ -11,7 +11,7 @@ const handle = app.getRequestHandler();
 const apiRoutes = require('./api');
 const models = require('../models');
 
-var manager =  require('./controllers/manager');
+// var manager =  require('./controllers/manager');
 
 app.prepare().then(() => {
   const server = express();

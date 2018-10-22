@@ -8,8 +8,8 @@ var moment = require('moment');
 // Configure MySQL connection
 var connection = mysql.createConnection({
 	host: 'localhost',
-	user: config.mysql.username,
-	password: config.mysql.password,
+	user: 'proxyuser',
+	password: '4batEGgF8aTU',
     database: config.mysql.database,
     multipleStatements: true,
   })
