@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ? '/nfl/query' : ''
+  baseUrl: process.env.NODE_ENV === 'production' ? '/nfl/query' : '/nfl/query'
 };
