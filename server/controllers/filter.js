@@ -38,7 +38,7 @@ exports.getTableData = (req, res) => {
         SUM(away_score + home_score)AS total_score,
         venue.lat, venue.lng, COUNT(DISTINCT game.id)as count, venue.name, venue.team
 
-        FROM rawdata_game_new as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
+        FROM game_new as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
       WHERE venue.name = :venue
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
