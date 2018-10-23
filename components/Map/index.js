@@ -61,7 +61,7 @@ class Map extends Component {
             {...this.state.viewport}
             width={typeof window !== 'undefined' && window.innerWidth}
             height={this.props.height}
-            mapStyle="mapbox://styles/weatherbell/cje6hsqkwge1g2rq933i04tu3"
+            mapStyle="mapbox://styles/v1/weatherbell/cje6hsqkwge1g2rq933i04tu3/wmts"
             onViewportChange={viewport => this.setState({ viewport })}
             interactive={false}
             attributionControl={false}
