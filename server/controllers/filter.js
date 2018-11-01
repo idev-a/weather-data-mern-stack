@@ -35,10 +35,10 @@ exports.getTableData = (req, res) => {
         SUM(turnovers_away + turnovers_home) AS turnovers_total, 
         (passing_int_home + passing_int_away) as passing_int_total,
         SUM(fumbles_lost_away + fumbles_lost_home) AS fumbles_total,
-        SUM(away_score + home_score)AS total_score,
+        SUM(away_score + home_score) AS total_score,
         venue.lat, venue.lng, COUNT(DISTINCT game.id)as count, venue.name, venue.team
 
-        FROM game_new as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
+        FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
       WHERE venue.name = :venue
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
