@@ -104,7 +104,7 @@ exports.getTableData = (req, res) => {
         lng: data.lng,
         team: data.team,
         stadium: data.name,
-        count: result.count || 0,
+        count: result[0].count || 0,
         wowxCount: dataWowx.count || 0,
         total_score: getData('total_score', 'Total Score', 2),
         rushing: {
