@@ -43,8 +43,8 @@
   },
   "scripts": {
     "build": "next build",
-    "dev": "cross-env NODE_ENV=development pm2 start  server/index.js --name nflquery",
-    "start": "cross-env NODE_ENV=production pm2 start server/index.js -i 0 --name nflquery",
+    "dev": "cross-env NODE_ENV=development node server/index.js",
+    "start": "cross-env NODE_ENV=production node server/index.js ",
     "updateWeatherDirection": "cross-env NODE_ENV=development babel-node scripts/updateWeatherDirection.js",
     "convertOrientation": "cross-env NODE_ENV=development babel-node scripts/convertOrientation.js",
     "populateWeather": "cross-env NODE_ENV=development babel-node scripts/seedWeather.js",
