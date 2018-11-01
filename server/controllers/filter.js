@@ -115,7 +115,7 @@ exports.getTableData = (req, res) => {
         passing: {
           passing_yds_total: getData('passing_yds_total', 'Passing Yards', 2),
           passing_attempts_total: getData('passing_attempts_total', 'Passing Attempts', 2),
-          passing_completions_total: getData('passing_completions_total', 'Passing Completions', 2),
+          passing_completion_total: getData('passing_completion_total', 'Passing Completions', 2),
           passing_comp_pct_total: getData('passing_comp_pct_total', 'Passing Completion Percentage', 2)
         },
         turnovers: {
