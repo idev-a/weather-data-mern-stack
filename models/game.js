@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
         primaryKey: true,
+        unique: true,
       },
       venue_id: {
         type: DataTypes.INTEGER,
@@ -63,16 +64,96 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
+      home_rush_attempts: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      home_rush_tds: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      home_rush_yds: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      home_yds_per_carry: {
+        type: DataTypes.FLOAT,
+        allowNull: true,
+      },
       rush_yds_tds_home: {
         type: DataTypes.STRING,
+        allowNull: true,
+      },
+      away_rush_attempts: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      away_rush_tds: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      away_rush_yds: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      away_yds_per_carry: {
+        type: DataTypes.FLOAT,
         allowNull: true,
       },
       rush_yds_tds_away: {
         type: DataTypes.STRING,
         allowNull: true,
       },
+      passing_completion_home: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_yds_home: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_attempts_home: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_td_home: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_int_home: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_comp_pct_home: {
+        type: DataTypes.FLOAT,
+        allowNull: true,
+      },
       cmp_att_yd_td_int_home: {
         type: DataTypes.STRING,
+        allowNull: true,
+      },
+      passing_completion_away: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_yds_away: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_attempts_away: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_td_away: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_int_away: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      passing_comp_pct_away: {
+        type: DataTypes.FLOAT,
         allowNull: true,
       },
       cmp_att_yd_td_int_away: {

@@ -25,15 +25,15 @@ exports.getTableData = (req, res) => {
     return models.sequelize.query(
       `SELECT
         AVG(home_score + away_score) AS combined_score, 
-        total_rush_yds, 
-        total_rush_attempts,
-        total_yds_per_carry,
-        passing_yds_total,
-        passing_attempts_total,
-        completions_total as passing_completions_total,
-        passing_comp_pct_total,
+        (home_rush_yds + away_rush_yds) as total_rush_yds, 
+        (home_rush_attempts + away_rush_attempts) as total_rush_attempts,
+        (home_yds_per_carry + away_yds_per_carry) as total_yds_per_carry,
+        (passing_yds_home + passing_yds_away) as passing_yds_total,
+        (passing_attempts_home + passing_attempts_away) as passing_attempts_total,
+        (passing_completion_home + passing_completion_away) as passing_completion_total,
+        (passing_comp_pct_home + passing_comp_pct_away) as passing_comp_pct_total,
         SUM(turnovers_away + turnovers_home) AS turnovers_total, 
-        passing_int_total,
+        (passing_int_home + passing_int_away) as passing_int_total,
         SUM(fumbles_lost_away + fumbles_lost_home) AS fumbles_total,
         SUM(away_score + home_score)AS total_score,
         venue.lat, venue.lng, COUNT(DISTINCT game.id)as count, venue.name, venue.team

@@ -1,8 +1,8 @@
-import axios from 'axios';
-import Promise from 'bluebird';
-var moment = require('moment-timezone');
+var axios = require('axios');
+var Promise = require('bluebird');
+var moment = require('moment');
 
-import models from '../models';
+var models = require('../models');
 
 
 const { Weather, Game, Venue } = models;
@@ -13,7 +13,7 @@ Game.findAll({ include: [Venue] }).then(games => {
     if (moment(game.date).isAfter(since)) {
       return axios
         .get(
-          `https://api.weathersource.com/v1/${process.env.WEATHER_KEY}/points/${
+          `https://api.weathersource.com/v1/750fe3bf727e29422ece/points/${
             game.Venue.lat
           },${
             game.Venue.lng

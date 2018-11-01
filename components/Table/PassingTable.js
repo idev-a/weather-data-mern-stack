@@ -23,21 +23,21 @@ const PassingTable = ({ data, loading }) => {
                 <td><strong>W/O Wx Avg</strong></td>
                 <td>{data.passing_yds_total.wowxAvg}</td>
                 <td>{data.passing_attempts_total.wowxAvg}</td>
-                <td>{data.passing_completions_total.wowxAvg}</td>
+                <td>{data.passing_completion_total.wowxAvg}</td>
                 <td>{data.passing_comp_pct_total.wowxAvg}</td>
               </tr>
               <tr key="passing-table-avg">
                 <td><strong>Average</strong></td>
                 <td>{data.passing_yds_total.avg}</td>
                 <td>{data.passing_attempts_total.avg}</td>
-                <td>{data.passing_completions_total.avg}</td>
+                <td>{data.passing_completion_total.avg}</td>
                 <td>{data.passing_comp_pct_total.avg}</td>
               </tr>
               <tr>
                 <td><strong>Δ</strong></td>
                 <td>{data.passing_yds_total.delta}</td>
                 <td>{data.passing_attempts_total.delta}</td>
-                <td>{data.passing_completions_total.delta}</td>
+                <td>{data.passing_completion_total.delta}</td>
                 <td>{data.passing_comp_pct_total.delta}</td>
               </tr>
             </tbody>
