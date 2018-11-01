@@ -76,6 +76,8 @@ exports.getTableData = (req, res) => {
       console.info('Received table data: ' + (endTime.getTime() - startTime.getTime()) / 1000 + ' s');
       const data = result[0] && result[0][0] || {};
       const dataWowx = result[1] && result[1][0] || {};
+
+      console.log(result)
   
       const getPercentage = field => (((Number(data[field]) - Number(dataWowx[field])) / Number(dataWowx[field])) * 100).toFixed(2);
   
