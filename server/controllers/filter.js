@@ -36,7 +36,7 @@ exports.getTableData = (req, res) => {
         (passing_int_home + passing_int_away) as passing_int_total,
         SUM(fumbles_lost_away + fumbles_lost_home) AS fumbles_total,
         SUM(away_score + home_score) AS total_score,
-        venue.lat, venue.lng, COUNT(DISTINCT game.id)as count, venue.name, venue.team
+        venue.lat, venue.lng, COUNT(DISTINCT game.id) as count, venue.name, venue.team
 
         FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
@@ -51,7 +51,7 @@ exports.getTableData = (req, res) => {
         AND weather.wind_speed ${windSpeedAboveBelow} ${Number(windSpeed)}` : ''
       }
       
-      GROUP BY game.weather_id ${includeWeather ? ', weather.id' : ''} AND venue.id, venue.lat, venue.lng, venue.name, venue.team, total_rush_yds, total_rush_attempts, total_yds_per_carry, passing_yds_total, passing_attempts_total, passing_completion_total, passing_comp_pct_total, passing_int_total
+      GROUP BY ${includeWeather ? 'weather.id AND' : ''}  venue.id, venue.lat, venue.lng, venue.name, venue.team, total_rush_yds, total_rush_attempts, total_yds_per_carry, passing_yds_total, passing_attempts_total, passing_completion_total, passing_comp_pct_total, passing_int_total
       ;`,
       {
         replacements: {
@@ -77,9 +77,6 @@ exports.getTableData = (req, res) => {
       const data = result[0] && result[0][0] || {};
       const dataWowx = result[1] && result[1][0] || {};
 
-      console.log('-------------')
-      console.log(result[0]);
-  
       const getPercentage = field => (((Number(data[field]) - Number(dataWowx[field])) / Number(dataWowx[field])) * 100).toFixed(2);
   
       // const whipAvgWowx = (Number(dataWowx.combined_pitching_bb) + Number(dataWowx.combined_batting_h)) /
