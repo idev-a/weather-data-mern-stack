@@ -10,7 +10,7 @@ const extractCSSPlugin = new ExtractTextPlugin({
 });
 
 module.exports = {
-  assetPrefix: dev ? '/nfl/query' : '/nfl/query',
+  assetPrefix: dev ? '/' : '/nfl/query',
   webpack(config, { dev }) {
     config.plugins.push(extractCSSPlugin);
     config.plugins.push(

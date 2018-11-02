@@ -8,7 +8,7 @@ exports.search = (req, res) => {
         replacements: {
           name: `%${req.query.q}%`,
           team: `%${req.query.q}%`,
-          isCurrent: `${!req.query.isCurrent ? 1 : 0}`,
+          isCurrent: `${req.query.isCurrent == 'false' ? 1 : 0}`,
         },
         type: models.sequelize.QueryTypes.SELECT,
       },

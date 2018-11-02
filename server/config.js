@@ -24,7 +24,7 @@ module.exports = {
   // Database
   mysql: {
     database: 'rotogrindersnfl',
-    username: process.env.NODE_ENV === 'development' ? 'proxyuser' : 'proxyuser',
-    password: process.env.NODE_ENV === 'development' ? '4batEGgF8aTU' : '4batEGgF8aTU',
+    username: process.env.NODE_ENV === 'development' ? 'root' : 'proxyuser',
+    password: process.env.NODE_ENV === 'development' ? '' : '4batEGgF8aTU',
   },
 };
