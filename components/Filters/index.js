@@ -384,7 +384,7 @@ export default (
       venue: 'Qualcomm Stadium',
       temp: 0,
       humidity: 0,
-      windSpeed: 0,
+      windSpeed: "0",
       windChill: 0,
       showRetiredVenues: false,
       humidityAboveBelow: 'above',

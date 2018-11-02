@@ -101,9 +101,9 @@ class Index extends React.Component {
             {this.state.passing && (<PercentageHeader
                 loading={this.state.isLoading}
                 data={{
-                  tp: { ...this.state.passing.passing_yds_total, ...{ icon: 'bat' }},
-                  ts: { ...this.state.total_score, ...{ icon: 'home-plate' }},
-                  tr: { ...this.state.rushing.rushing_yards, ...{ icon: 'baseball' }}
+                  tp: { ...this.state.passing.passing_yds_total, ...{ icon: '' }},
+                  ts: { ...this.state.total_score, ...{ icon: '' }},
+                  tr: { ...this.state.rushing.rushing_yards, ...{ icon: '' }}
                 }}
               />)}
             <RushingTable loading={this.state.isLoading} data={this.state.rushing} />
