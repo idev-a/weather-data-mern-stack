@@ -9,6 +9,7 @@ exports.getTableData = (req, res) => {
     venue,
     temp,
     windSpeed,
+    showRetiredVenues,
     windChill,
     startDate,
     endDate,
@@ -42,6 +43,7 @@ exports.getTableData = (req, res) => {
       
       WHERE venue.roof = 'open' AND venue.name = :venue
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
+      ${showRetiredVenues ? 'AND venue.isCurrent = 0' : 'And venue.isCurrent = 1'}
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?
       `${precipitation === 'snow' ? `AND weather.snowfall > 0` : ''}
