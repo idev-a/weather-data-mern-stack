@@ -128,7 +128,7 @@ class FiltersForm extends React.Component {
               />
             </div>
           </div>
-          <div className=" mr2">
+          {/* <div className=" mr2">
             <label htmlFor="startDate">Show Retired Venues</label>
             <div className="flex justify-center mt1">
               <input
@@ -138,7 +138,7 @@ class FiltersForm extends React.Component {
                 onChange={handleChange}
               />
             </div>
-          </div>
+          </div> */}
           <div className="flex mr2">
             <div className="mr2">
               <label htmlFor="startDate">Start Date/Time</label>

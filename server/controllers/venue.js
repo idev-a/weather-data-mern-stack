@@ -1,5 +1,6 @@
 const models = require('../../models/index');
 
+//  isCurrent: `${req.query.isCurrent == 'false' ? 1 : 0}`,
 exports.search = (req, res) => {
   models.sequelize
     .query(
@@ -8,7 +9,6 @@ exports.search = (req, res) => {
         replacements: {
           name: `%${req.query.q}%`,
           team: `%${req.query.q}%`,
-          isCurrent: `${req.query.isCurrent == 'false' ? 1 : 0}`,
         },
         type: models.sequelize.QueryTypes.SELECT,
       },
