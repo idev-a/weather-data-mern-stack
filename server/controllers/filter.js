@@ -2,7 +2,6 @@ const Promise = require('bluebird');
 const models = require('../../models');
 const moment = require('moment');
 
-      // ${showRetiredVenues == 'true' ? 'AND venue.isCurrent = 0' : 'And venue.isCurrent = 1'}
 exports.getTableData = (req, res) => {
   const startTime = new Date();
   
@@ -42,9 +41,8 @@ exports.getTableData = (req, res) => {
 
         FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
-      WHERE venue.roof = 'open' AND venue.name = :venue
+      WHERE  venue.roof = 'open' And venue.isCurrent = 1 AND venue.name = :venue
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
-
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?
       `${precipitation === 'snow' ? `AND weather.snowfall > 0` : ''}
