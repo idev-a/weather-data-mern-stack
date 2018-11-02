@@ -18,7 +18,7 @@ module.exports = {
     // API URL to be used in the server-side code
     serverUrl:
       process.env.API_SERVER_URL ||
-      `http://localhost:${8880}/nfl/query`,
+      `http://localhost:${8880}`,
   },
 
   // Database

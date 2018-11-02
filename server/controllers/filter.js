@@ -40,7 +40,7 @@ exports.getTableData = (req, res) => {
 
         FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
-      WHERE venue.roof != 'open' AND venue.name = :venue
+      WHERE venue.roof = 'open' AND venue.name = :venue
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?
