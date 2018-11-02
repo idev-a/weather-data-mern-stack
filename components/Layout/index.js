@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import 'flexboxgrid/css/flexboxgrid.min.css';
-import 'basscss/css/basscss-important.min.css';
 import 'react-vis/dist/style.css';
 import '../../styles/main.scss';
 

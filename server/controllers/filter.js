@@ -35,7 +35,7 @@ exports.getTableData = (req, res) => {
         AVG(turnovers_away + turnovers_home) AS turnovers_total, 
         AVG(passing_int_home + passing_int_away) as passing_int_total,
         AVG(fumbles_lost_away + fumbles_lost_home) AS fumbles_total,
-        AVG(away_score + home_score) AS total_score,
+        SUM(away_score + home_score) AS total_score,
         venue.lat, venue.lng, COUNT(DISTINCT game.id) as count, venue.name, venue.team
 
         FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
