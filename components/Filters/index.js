@@ -122,6 +122,17 @@ class FiltersForm extends React.Component {
               />
             </div>
           </div>
+          <div className=" mr2">
+            <label htmlFor="startDate">Show Retired Venues</label>
+            <div className="flex justify-center mt1">
+              <input
+                type="checkbox"
+                name="showRetiredVenues"
+                checked={values.showRetiredVenues}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
           <div className="flex mr2">
             <div className="mr2">
               <label htmlFor="startDate">Start Date/Time</label>
@@ -369,6 +380,8 @@ export default (
       humidity: 0,
       windSpeed: 0,
       windChill: 0,
+      showRetiredVenues: false,
+      humidityAboveBelow: 'above',
       tempAboveBelow: 'above',
       windSpeedAboveBelow: 'above',
       windChillAboveBelow: 'above',

@@ -25,22 +25,22 @@ exports.getTableData = (req, res) => {
     return models.sequelize.query(
       `SELECT
         AVG(home_score + away_score) AS combined_score, 
-        SUM(home_rush_yds + away_rush_yds) as total_rush_yds, 
-        SUM(home_rush_attempts + away_rush_attempts) as total_rush_attempts,
-        SUM(home_yds_per_carry + away_yds_per_carry) as total_yds_per_carry,
-        SUM(passing_yds_home + passing_yds_away) as passing_yds_total,
-        SUM(passing_attempts_home + passing_attempts_away) as passing_attempts_total,
-        SUM(passing_completion_home + passing_completion_away) as passing_completion_total,
-        SUM(passing_comp_pct_home + passing_comp_pct_away) as passing_comp_pct_total,
-        SUM(turnovers_away + turnovers_home) AS turnovers_total, 
-        SUM(passing_int_home + passing_int_away) as passing_int_total,
-        SUM(fumbles_lost_away + fumbles_lost_home) AS fumbles_total,
-        SUM(away_score + home_score) AS total_score,
+        AVG(home_rush_yds + away_rush_yds) as total_rush_yds, 
+        AVG(home_rush_attempts + away_rush_attempts) as total_rush_attempts,
+        AVG(home_yds_per_carry + away_yds_per_carry) as total_yds_per_carry,
+        AVG(passing_yds_home + passing_yds_away) as passing_yds_total,
+        AVG(passing_attempts_home + passing_attempts_away) as passing_attempts_total,
+        AVG(passing_completion_home + passing_completion_away) as passing_completion_total,
+        AVG(passing_comp_pct_home + passing_comp_pct_away) as passing_comp_pct_total,
+        AVG(turnovers_away + turnovers_home) AS turnovers_total, 
+        AVG(passing_int_home + passing_int_away) as passing_int_total,
+        AVG(fumbles_lost_away + fumbles_lost_home) AS fumbles_total,
+        AVG(away_score + home_score) AS total_score,
         venue.lat, venue.lng, COUNT(DISTINCT game.id) as count, venue.name, venue.team
 
         FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
-      WHERE venue.name = :venue
+      WHERE venue.roof != 'open' AND venue.name = :venue
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?

@@ -95,8 +95,8 @@ Map.defaultProps = {
   height: 300,
   lat: 33.735278,
   lng: -84.389444,
-  team: 'Atlanta Braves',
-  stadium: 'SunTrust Park',
+  team: 'Rotogrinders',
+  stadium: 'Game Query Tool',
 };
 
 export default Map;

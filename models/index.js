@@ -6,8 +6,8 @@ const config = require('../server/config');
 const db = {};
 const sequelize = new Sequelize(
   config.mysql.database,
-  'proxyuser',
-  '4batEGgF8aTU',
+  config.mysql.username,
+  config.mysql.password,
   {
     dialect: 'mysql',
     dialectOptions: { decimalNumbers: true },
