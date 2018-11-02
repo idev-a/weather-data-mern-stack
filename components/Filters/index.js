@@ -35,7 +35,7 @@ class FiltersForm extends React.Component {
   fetchVenues(e, q) {
     axios
       .get(`${config.baseUrl}/api/v1/venue/search`, {
-        params: { q, isCurrent:this.props.values.showRetiredVenues },
+        params: { q },
       })
       .then(venues => {
         const venueNames = venues.data.map(venue => ({
