@@ -20,16 +20,22 @@ class FiltersForm extends React.Component {
     };
 
     this.fetchVenues = this.fetchVenues.bind(this);
+    this.handleShowVenue = this.handleShowVenue.bind(this);
   }
 
   componentDidMount() {
     this.props.submitForm();
   }
 
+  handleShowVenue() {
+    this.props.handleChange();
+    this.fetchVenues();
+  }
+
   fetchVenues(e, q) {
     axios
       .get(`${config.baseUrl}/api/v1/venue/search`, {
-        params: { q },
+        params: { q, isCurrent:this.props.values.showRetiredVenues },
       })
       .then(venues => {
         const venueNames = venues.data.map(venue => ({
