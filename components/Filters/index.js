@@ -290,7 +290,7 @@ class FiltersForm extends React.Component {
               <input
                 name="windSpeed"
                 type="text"
-                values={values.windSpeed}
+                value={values.windSpeed}
                 onChange={handleChange}
                 maxLength="3"
               />
