@@ -1,10 +1,10 @@
 const getColor = (data, key) => {
   if (['bb', 'era', 'whip'].indexOf(key) > -1) {
-    return data[key].delta <= 3 ? '#13dd01' : '#ee0009';
+    return data[key].delta <= 0 ? '#13dd01' : '#ee0009';
   } else if (['rbi', 'tr', 'gb', 'ld'].indexOf(key) > -1) {
-    return data[key].percentage >= 30 || data[key].percentage <= -30 ? '#13dd01' : '#ee0009';
+    return data[key].percentage > 0 ? '#13dd01' : '#ee0009';
   } else {
-    return data[key].delta > 3 ? '#13dd01' : '#ee0009';
+    return data[key].delta > 0 ? '#13dd01' : '#ee0009';
   }
 };
 

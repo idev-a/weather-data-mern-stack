@@ -9,6 +9,7 @@ const PassingTable = ({ data, loading }) => {
     <div className={s.tableWrapper}>
       {data && !loading ? (
         <div>
+        <Loader />
           <h2 className={s.tableHeading}>Passing</h2>
           <table className={classnames(s.table, 'tbl')}>
             <tbody>

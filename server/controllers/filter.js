@@ -123,6 +123,7 @@ exports.getTableData = (req, res) => {
           turnovers_total: getData('turnovers_total', 'Total Turnovers', 2),
           passing_int_total: getData('passing_int_total', 'Interception', 2),
           fumbles_total: getData('fumbles_total', 'Fumbles', 2),
+          total_points: getData('total_score', 'Total Points', 2),
         }
       });
     })

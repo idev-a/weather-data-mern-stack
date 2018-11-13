@@ -20,12 +20,12 @@ const PercentageHeader = ({ data }) => {
             key={`percentage-${key}`}
           >
             <PercentageCircle
-              percent={stat.wowxAvg}
+              percent={stat.percentage}
               radius={100}
               color={getColor(data, key)} 
               borderWidth={20}
             >
-              <div className={s.percentage}>{Number(stat.wowxAvg)}</div>
+              <div className={s.percentage}>{Number(stat.percentage) > 0 ? '+' : ''}{Number(stat.percentage)} %</div>
             </PercentageCircle>
             <div className={classnames(s.label, 'center')}>{stat.label}</div>
             <div className={classnames(s.icon, `icn-${stat.icon}`, 'center', 'mt2')} />

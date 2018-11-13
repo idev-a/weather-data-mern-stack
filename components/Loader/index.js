@@ -7,7 +7,7 @@ import s from './Loader.scss';
 const Loader = ({ text }) => {
   return (
     <div className={s.loader}>
-      <div className={classnames('icn-baseball', s.icon)} />
+      <div className={classnames('icn-football', s.icon)} />
       <div className={s.text}>{text}</div>
     </div>
   );
