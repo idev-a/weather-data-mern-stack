@@ -4,7 +4,7 @@ const models = require('../../models/index');
 exports.search = (req, res) => {
   models.sequelize
     .query(
-      'SELECT id, name, team FROM venue WHERE (lower(name) LIKE (:name) OR lower(team) LIKE (:team)) AND  roof = \'open\' AND isCurrent=1;',
+      'SELECT id, name, team FROM venue WHERE (lower(name) LIKE (:name) OR lower(team) LIKE (:team)) AND  roof = \'open\' AND isCurrent=1; ORDER BY name, team ',
       {
         replacements: {
           name: `%${req.query.q}%`,

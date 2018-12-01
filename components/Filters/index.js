@@ -354,7 +354,8 @@ class FiltersForm extends React.Component {
                 name="precipitation"
                 onChange={handleChange}
               >
-                <option value="">None</option>
+                <option value="">Any</option>
+                <option value="dry">Dry</option>
                 <option value="rain">Rain</option>
                 <option value="snow">Snow</option>
               </select>

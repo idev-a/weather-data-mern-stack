@@ -45,8 +45,9 @@ exports.getTableData = (req, res) => {
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?
-      `${precipitation === 'snow' ? `AND weather.snowfall > 0` : ''}
+      `${precipitation === 'snow' ? `AND weather.snowfall > 0 AND weather.precipitation = 0` : ''}
         ${precipitation === 'rain' ? `AND weather.precipitation > 0 AND weather.snowfall = 0` : ''}
+        ${precipitation === 'dry' ? `AND weather.precipitation = 0 AND weather.snowfall = 0` : ''}
         AND weather.temp ${tempAboveBelow} ${Number(temp)}
         AND weather.wind_chill ${windChillAboveBelow} ${Number(windChill)}
         AND weather.wind_speed ${windSpeedAboveBelow} ${Number(windSpeed)}` : ''
@@ -107,7 +108,7 @@ exports.getTableData = (req, res) => {
         stadium: data.name,
         count: data.count || 0,
         wowxCount: dataWowx.count || 0,
-        total_score: getData('total_score', 'Total Score', 2),
+        total_score: getData('combined_score', 'Average Score', 2),
         rushing: {
           rushing_yards: getData('total_rush_yds', 'Rushing Yards', 2),
           rushing_attempts: getData('total_rush_attempts', 'Rushing Attempts', 2),
@@ -123,7 +124,7 @@ exports.getTableData = (req, res) => {
           turnovers_total: getData('turnovers_total', 'Total Turnovers', 2),
           passing_int_total: getData('passing_int_total', 'Interception', 2),
           fumbles_total: getData('fumbles_total', 'Fumbles', 2),
-          total_points: getData('total_score', 'Total Points', 2),
+          total_points: getData('combined_score', 'Average Points', 2),
         }
       });
     })

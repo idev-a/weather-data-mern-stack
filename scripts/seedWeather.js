@@ -73,11 +73,11 @@ Game.findAll({ include: [Venue] }).then(games => {
             },
           );
 
-          console.log (data);
+          data.timestamp = game.start_date;
 
           Object.keys(data).forEach(key => {
             if (key != 'timestamp') {
-              data[key] = (data[key] / response.data.length).toFixed(2);
+              data[key] = (data[key] / response.data.length).toFixed(5);
             }
           });
 

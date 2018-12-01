@@ -18,7 +18,7 @@ const TurnoversTable = ({ data, loading }) => {
                 <th>Total Turnovers</th>
                 <th>Interceptions</th>
                 <th>Fumbles</th>
-                <th>Total Points</th>
+                <th>Average Points</th>
               </tr>
               <tr key="Turnovers-table-wowxAvg">
                 <td><strong>W/O Wx Avg</strong></td>

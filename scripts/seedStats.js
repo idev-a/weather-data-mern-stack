@@ -17,25 +17,26 @@ fs.readdirAsync(dataDir).map(file =>
       return Promise.map(
         data,
         item => {
-          const stat = { ...item };
+          const stat = {...item };
           // stat.id = undefined;
           // const timeString = item.time
           //   ? item.time.match(/\d.*\./).replace(/\./g, '')
           //   : '12:00 pm';
           const time = moment(item.time, "H:mma").format("HH:mm:ss")
           const date = moment(item.date).format("YYYY-MM-DD");
-          const dateObj = moment.tz(
-            date + " " + time, zone
+          const dateObj = moment(
+            date + " " + time
           );
           const duration = moment(item.time_of_game, 'H:mm');
           const durationHours = duration.hours();
           const durationMinutes = duration.minutes();
-          const start_date = dateObj.format('YYYY-MM-DD HH:mm:ss');
+          const start_date = dateObj.utc().format('YYYY-MM-DD HH:mm:ss');
           const end_date = dateObj
             .add({
               hours: durationHours,
               minutes: durationMinutes,
             })
+            .utc()
             .format('YYYY-MM-DD HH:mm:ss');
           const rush_home = item.rush_yds_tds_home.split('-');
           stat.home_rush_attempts = rush_home[0];
@@ -90,10 +91,10 @@ fs.readdirAsync(dataDir).map(file =>
               });
           }
         },
-        { concurrency: 100 },
+        { concurrency: 10 },
       );
     })
-    .catch(err => {
-      console.log('Content Error', err);
-    }),
+    // .catch(err => {
+    //   console.log('Content Error', err);
+    // }),
 );
