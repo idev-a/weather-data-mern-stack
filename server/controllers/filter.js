@@ -45,7 +45,7 @@ exports.getTableData = (req, res) => {
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?
-      `${precipitation === 'snow' ? `AND weather.snowfall > 0 AND weather.precipitation = 0` : ''}
+      `${precipitation === 'snow' ? `AND weather.snowfall > 0 AND weather.precipitation >= 0` : ''}
         ${precipitation === 'rain' ? `AND weather.precipitation > 0 AND weather.snowfall = 0` : ''}
         ${precipitation === 'dry' ? `AND weather.precipitation = 0 AND weather.snowfall = 0` : ''}
         AND weather.temp ${tempAboveBelow} ${Number(temp)}

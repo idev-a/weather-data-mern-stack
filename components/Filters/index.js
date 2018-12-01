@@ -357,7 +357,7 @@ class FiltersForm extends React.Component {
                 <option value="">Any</option>
                 <option value="dry">Dry</option>
                 <option value="rain">Rain</option>
-                <option value="snow">Snow</option>
+                <option value="snow">Rain/Snow</option>
               </select>
             </div>
           </div>
