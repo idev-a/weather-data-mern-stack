@@ -17,6 +17,7 @@ class FiltersForm extends React.Component {
     this.state = {
       venues: [],
       venue: '',
+      team: '',
     };
 
     this.fetchVenues = this.fetchVenues.bind(this);
@@ -50,6 +51,7 @@ class FiltersForm extends React.Component {
           },
           () => {
             this.props.setFieldValue('venue', q);
+            this.props.setFieldValue('team', q);
           },
         );
       })
@@ -83,6 +85,12 @@ class FiltersForm extends React.Component {
           <div className="flex-auto mr2">
             <div>
               <label htmlFor="team">Home Team or Stadium Name</label>
+              <input 
+                  type="hidden"
+                  name="team"
+                  value={values.team}
+                  onChange={handleChange}
+                />
               <Autocomplete
                 wrapperStyle={{
                   display: 'block',
@@ -110,10 +118,15 @@ class FiltersForm extends React.Component {
                     type="text"
                     {...props}
                   />
+                 
                 )}
-                value={values.venue}
+                value={values.venue ? `${values.venue} - ${values.team}` : ''}
                 onChange={this.fetchVenues}
-                onSelect={value => this.props.setFieldValue('venue', value)}
+                onSelect={(value, item) => {
+                  console.log(item);
+                  this.props.setFieldValue('venue', item.name)
+                  this.props.setFieldValue('team', item.team);
+                }}
                 menuStyle={{
                   borderRadius: '3px',
                   boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
@@ -383,6 +396,7 @@ export default (
   withFormik({
     mapPropsToValues: () => ({
       venue: 'Qualcomm Stadium',
+      team: 'San Diego Chargers',
       temp: 0,
       humidity: 0,
       windSpeed: "0",

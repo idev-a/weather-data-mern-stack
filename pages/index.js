@@ -10,6 +10,7 @@ import PassingTable from '../components/Table/PassingTable';
 import TurnoversTable from '../components/Table/TurnoversTable';
 import PercentageHeader from '../components/PercentageHeader';
 import PercentageSection from '../components/PercentageSection';
+import Footer from '../components/Footer';
 import Alert from '../components/Alert';
 import ResultsMessage from '../components/ResultMessage';
 const config = require('../config');
@@ -118,6 +119,7 @@ class Index extends React.Component {
           </div> : <div className="no-results">No Results</div>
           }
         </div>
+        <Footer />
       </Layout>
     );
   }

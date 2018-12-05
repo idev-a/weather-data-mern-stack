@@ -7,6 +7,7 @@ exports.getTableData = (req, res) => {
   
   const {
     venue,
+    team,
     temp,
     windSpeed,
     showRetiredVenues,
@@ -41,7 +42,7 @@ exports.getTableData = (req, res) => {
 
         FROM game as game JOIN venue ON game.venue_id = venue.id ${includeWeather ? 'JOIN weather ON game.weather_id = weather.id' : ''}
       
-      WHERE  venue.roof = 'open' And venue.isCurrent = 1 AND venue.name = :venue
+      WHERE  venue.roof = 'open' And venue.isCurrent = 1 AND venue.name = :venue AND venue.team = :team 
       ${startDate ? `AND game.start_date >= '${startDate}'` : ''}
       ${endDate ? `AND game.end_date <= '${endDate}'` : ''}
       ${includeWeather ?
@@ -58,6 +59,7 @@ exports.getTableData = (req, res) => {
       {
         replacements: {
           venue,
+          team,
           precipitation,
         },
         type: models.sequelize.QueryTypes.SELECT,
